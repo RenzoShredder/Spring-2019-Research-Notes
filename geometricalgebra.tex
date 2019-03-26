@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+% Preamble
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{standalone}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{natbib}
+\usepackage{amsfonts}
+
+\title{Geometric algebra}
+\author{Lauren Shriver}
+\date{March 25 2019}
+
+\begin{document}
+
+\maketitle
+
+\section*{Geometric product $\vec{a}\vec{b}$}
+    The \textbf{geometric product} is subject to the following identities:
+    \begin{itemize}
+        \item \textbf{Associative}: $(\vec{a}\vec{b})\vec{c}=\vec{a}(\vec{b}\vec{c})$
+        \item \textbf{Left distributive}: $\vec{a}(\vec{b}+\vec{c})=\vec{a}\vec{b}+\vec{a}\vec{c}$
+        \item \textbf{Right distributive}: $(\vec{b}+\vec{c})\vec{a}=\vec{b}\vec{a}+\vec{c}\vec{a}$
+        \item \textbf{Contraction}: $\vec{a}^2=|\vec{a}|^2$
+    \end{itemize}
+    The geometric product gives rise to two new vector products:
+    \begin{enumerate}
+        \item \textbf{Inner product}: $\vec{a}\cdot \vec{b}$
+            \begin{itemize}
+                \item Symmetric
+                \item Outputs a scalar
+                \item Expression: $\vec{a}\cdot \vec{b} = \frac{1}{2}(\vec{a}\vec{b} + \vec{b}\vec{a}) = \vec{b}\cdot \vec{a}$
+            \end{itemize}
+        \item \textbf{Outer product}: $\vec{a} \wedge \vec{b}$
+            \begin{itemize}
+                \item Antisymmetric
+                \item Outputs a bivector
+                \item Expression: $\vec{a}\wedge \vec{b} = \frac{1}{2}(\vec{a}\vec{b}-\vec{b}\vec{a}) = -\vec{b}\wedge \vec{a}$
+            \end{itemize}
+    \end{enumerate}
+    By \textbf{canonical decomposition}, these two product definitions allows us to write the following expression as a definition for the geometric product:
+    \begin{equation*}
+        \vec{a}\vec{b} = \vec{a}\cdot\vec{b} + \vec{a}\wedge\vec{b} = \text{inner product} + \text{outer product}
+    \end{equation*}
+\subsection*{Properties}
+    \begin{itemize}
+        \item For orthogonal vectors, $\vec{a}\cdot\vec{b}=0 \Leftrightarrow \vec{a}\vec{b}=-\vec{b}\vec{a}$
+        \item For colinear vectors, $\vec{a}\wedge\vec{b}=0 \Leftrightarrow \vec{a}\vec{b}=\vec{b}\vec{a}$
+            \begin{itemize}
+                \item The geometric product of two colinear vectors corresponds with a parallelogram with zero area
+            \end{itemize}
+    \end{itemize}
+\subsection*{Geometric interpretation}
+    \begin{itemize}
+        \item $\vec{a}\vec{b}$ quantifies/measures the relative direction of vectors $\vec{a}$ and $\vec{b}$
+        \item A pair of colinear vectors are said to be \textbf{commutative}
+        \item A pair of orthogonal vectors are said to be \textbf{anticommutive}
+        \item Multiplication can be extended to these extreme cases by introducing an orthonormal set of vectors 
+    \end{itemize}
+
+\section*{Basis and Bivectors}
+\subsection*{Review: The Kronecker delta}
+The \textbf{Kronecker delta} is a \textbf{piecewise function} of variables $i$ and $j$
+    \begin{equation*}
+        \delta_{ij}=
+            \begin{cases}
+                1, &         \text{if } i=j,\\
+                0, &         \text{if } i\neq j.
+            \end{cases}
+    \end{equation*}
+
+\section*{Vectors and Complex Numbers}
+\section*{Geometric Algebra for Physical Space}
+\section*{Reflections and Rotations}
+\end{document}
